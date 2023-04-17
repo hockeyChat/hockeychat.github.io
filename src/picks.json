@@ -1,0 +1,92 @@
+{
+  "poolEntries": {
+    "SAM": {
+      "score": 0,
+      "players": [
+        {
+          "id": 8476454,
+          "name": "Ryan Nugent-Hopkins",
+          "position": "F",
+          "team": "EDM"
+        },
+        {
+          "id": 8474564,
+          "name": "Steven Stamkos",
+          "position": "F",
+          "team": "TBL"
+        },
+        {
+          "id": 8471685,
+          "name": "Anze Kopitar",
+          "position": "F",
+          "team": "LAK"
+        },
+        {
+          "id": 8478550,
+          "name": "Artemi Panarin",
+          "position": "F",
+          "team": "NYR"
+        },
+        {
+          "id": 8479314,
+          "name": "Matthew Tkachuk",
+          "position": "F",
+          "team": "FLA"
+        },
+        {
+          "id": 8476459,
+          "name": "Mika Zibanejad",
+          "position": "F",
+          "team": "NYR"
+        },
+        {
+          "id": 8480069,
+          "name": "Cale Makar",
+          "position": "D",
+          "team": "COL"
+        },
+        {
+          "id": 8477986,
+          "name": "Brandon Montour",
+          "position": "D",
+          "team": "FLA"
+        },
+        {
+          "id": 8479325,
+          "name": "Charlie McAvoy",
+          "position": "D",
+          "team": "BOS"
+        },
+        {
+          "id": 8476854,
+          "name": "Hampus Lindholm",
+          "position": "D",
+          "team": "BOS"
+        }
+      ]
+    },
+    "SamC": {
+      "score": 0,
+      "players": [
+        {
+          "id": 8478402,
+          "name": "Connor McDavid",
+          "position": "F",
+          "team": "EDM"
+        },
+        {
+          "id": 8478398,
+          "name": "Kyle Connor",
+          "position": "F",
+          "team": "WPG"
+        },
+        {
+          "id": 8477940,
+          "name": "Nikolaj Ehlers",
+          "position": "F",
+          "team": "WPG"
+        }
+      ]
+    }
+  }
+}
