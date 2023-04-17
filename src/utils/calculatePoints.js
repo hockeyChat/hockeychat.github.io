@@ -15,6 +15,7 @@ export const calculatePoints = (skaterStats) => {
       shots * 0.1 +
       powerPlayGoals +
       (powerPlayPoints - powerPlayGoals) * 0.5;
+      
     return points;
   }
   return 0;
