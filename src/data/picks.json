@@ -67,10 +67,10 @@
           "team": "VGK"
         },
         {
-          "id": 8470613,
-          "name": "Brent Burns",
+          "id": 8474563,
+          "name": "Drew Doughty",
           "position": "D",
-          "team": "CAR"
+          "team": "LAK"
         },
         {
           "id": 8476854,
@@ -272,6 +272,71 @@
           "name": "Jacob Trouba",
           "position": "D",
           "team": "NYR"
+        }
+      ]
+    },
+    "It's Tim": {
+      "score": 0,
+      "players": [
+        {
+          "id": 8479318,
+          "name": "Auston Matthews",
+          "position": "F",
+          "team": "TOR"
+        },
+        {
+          "id": 8473419,
+          "name": "Brad Marchand",
+          "position": "F",
+          "team": "BOS"
+        },
+        {
+          "id": 8478550,
+          "name": "Artemi Panarin",
+          "position": "F",
+          "team": "NYR"
+        },
+        {
+          "id": 8478864,
+          "name": "Kirill Kaprizov",
+          "position": "F",
+          "team": "MIN"
+        },
+        {
+          "id": 8478427,
+          "name": "Sebastian Aho",
+          "position": "F",
+          "team": "CAR"
+        },
+        {
+          "id": 8481559,
+          "name": "Jack Hughes",
+          "position": "F",
+          "team": "NJD"
+        },
+        {
+          "id": 8474563,
+          "name": "Drew Doughty",
+          "position": "D",
+          "team": "LAK"
+        },
+        {
+          "id": 8478038,
+          "name": "Devon Toews",
+          "position": "D",
+          "team": "COL"
+        },
+        {
+          "id": 8474565,
+          "name": "Alex Pietrangelo",
+          "position": "D",
+          "team": "VGK"
+        },
+        {
+          "id": 8479325,
+          "name": "Charlie McAvoy",
+          "position": "D",
+          "team": "BOS"
         }
       ]
     }
