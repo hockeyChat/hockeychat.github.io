@@ -49,8 +49,8 @@ const StatTable = ({ user, team }) => {
             <tr>
               <th>Player</th>
               <th>Score</th>
-              <th>Pos.</th>
               <th>Team</th>
+              <th>Pos.</th>
               <th>GP</th>
               <th>G</th>
               <th>A</th>
@@ -67,8 +67,8 @@ const StatTable = ({ user, team }) => {
                 const {
                   id,
                   name,
-                  position,
                   team,
+                  position,
                   games,
                   goals,
                   assists,
