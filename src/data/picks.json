@@ -65,26 +65,68 @@
         }
       ]
     },
-    "SamC": {
+    "Pubesy": {
       "score": 0,
       "players": [
         {
-          "id": 8478402,
-          "name": "Connor McDavid",
+          "id": 8480027,
+          "name": "Jason Robertson",
           "position": "F",
-          "team": "EDM"
+          "team": "DAL"
         },
         {
-          "id": 8478398,
-          "name": "Kyle Connor",
+          "id": 8473419,
+          "name": "Brad Marchand",
           "position": "F",
-          "team": "WPG"
+          "team": "BOS"
         },
         {
-          "id": 8477940,
-          "name": "Nikolaj Ehlers",
+          "id": 8481559,
+          "name": "Jack Hughes",
           "position": "F",
-          "team": "WPG"
+          "team": "NJD"
+        },
+        {
+          "id": 8478483,
+          "name": "Mitchell Marner",
+          "position": "F",
+          "team": "TOR"
+        },
+        {
+          "id": 8470794,
+          "name": "Joe Pavelski",
+          "position": "F",
+          "team": "DAL"
+        },
+        {
+          "id": 8478550,
+          "name": "Artemi Panarin",
+          "position": "F",
+          "team": "NYR"
+        },
+        {
+          "id": 8480069,
+          "name": "Cale Makar",
+          "position": "D",
+          "team": "COL"
+        },
+        {
+          "id": 8479410,
+          "name": "Mikhail Sergachev",
+          "position": "D",
+          "team": "TBL"
+        },
+        {
+          "id": 8476854,
+          "name": "Hampus Lindholm",
+          "position": "D",
+          "team": "BOS"
+        },
+        {
+          "id": 8474563,
+          "name": "Drew Doughty",
+          "position": "D",
+          "team": "LAK"
         }
       ]
     }

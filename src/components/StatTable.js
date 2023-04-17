@@ -29,6 +29,10 @@ const PlayerName = styled.td`
   text-align: left;
   font-weight: bold;
 `;
+const Score = styled.td`
+  text-align: right;
+  font-weight: bold;
+`;
 
 const StatTable = ({ user, team }) => {
   return (
@@ -82,9 +86,9 @@ const StatTable = ({ user, team }) => {
                 <td>{shots || 0}</td>
                 <td>{powerPlayGoals || 0}</td>
                 <td>{powerPlayPoints - powerPlayGoals || 0}</td>
-                <td>
-                  <strong>{score}</strong>
-                </td>
+                <Score>
+                  {score.toFixed(1)}
+                </Score>
               </tr>
             );
           })}

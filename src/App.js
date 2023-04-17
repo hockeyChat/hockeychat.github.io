@@ -3,7 +3,7 @@ import styled from "styled-components";
 import StatTable from "./components/StatTable";
 import logo from "./assets/logo.jpg";
 import { calculatePoints } from "./utils/calculatePoints";
-import picks from "./picks.json";
+import picks from "./data/picks.json";
 
 const PageWrap = styled.main`
   padding: 2rem;
@@ -37,7 +37,7 @@ function App() {
     if (!statData.length) {
       const queries = allPlayerIds.map((playerId) =>
         fetch(
-          `https://statsapi.web.nhl.com/api/v1/people/${playerId}/stats?stats=statsSingleSeason&season=20222023&expand=person.name`
+          `https://statsapi.web.nhl.com/api/v1/people/${playerId}/stats?stats=statsSingleSeasonPlayoffs&season=20222023`
         )
       );
       Promise.all(queries).then((responses) =>
@@ -54,7 +54,7 @@ function App() {
       allPlayerIds.forEach((playerId, i) => {
         const playerData = allPlayers.find((player) => player.id === playerId);
         const { id, name, position, team } = playerData;
-        const seasonStats = { ...statData[i].stats[0].splits[0].stat };
+        const seasonStats = { ...statData[i].stats[0].splits[0]?.stat };
         statsById[playerId] = {
           ...seasonStats,
           id,
