@@ -2,8 +2,10 @@ import React from "react";
 import styled from "styled-components";
 
 const TeamSection = styled.section`
-  border-bottom: 2px solid #1a261a;
   padding: 2rem;
+  &:not(:last-child) {
+    border-bottom: 2px solid #1a261a;
+  }
 `;
 const ScrollWrapper = styled.div`
   width: 100%;
@@ -83,8 +85,8 @@ const StatTable = ({ user, team }) => {
                   <tr key={id}>
                     <PlayerName>{name}</PlayerName>
                     <Score>{score.toFixed(1)}</Score>
-                    <td>{position}</td>
                     <td>{team}</td>
+                    <td>{position}</td>
                     <td>{games || 0}</td>
                     <td>{goals || 0}</td>
                     <td>{assists || 0}</td>
