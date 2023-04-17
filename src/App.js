@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import StatTable from "./components/StatTable";
+import logo from "./assets/logo.jpg";
 import { calculatePoints } from "./utils/calculatePoints";
 import picks from "./picks.json";
 
@@ -9,14 +10,22 @@ const PageWrap = styled.main`
   max-width: 1024px;
   margin: auto;
   text-align: center;
+  h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      height: 80px;
+      width: 80px;
+      margin: 0 2rem;
+    }
+  }
 `;
 
 function App() {
   const [statData, setStatData] = useState([]);
   const [entriesWithStats, setEntriesWithStats] = useState({});
   const [skaterStats, setSkaterStats] = useState({});
-  const [statsLoaded, setStatsLoaded] = useState(false);
-  const [statsSet, setStatsSet] = useState(false);
   const { poolEntries } = picks;
 
   const allPlayers = Object.values(poolEntries)
@@ -68,13 +77,12 @@ function App() {
       entriesPool.forEach(([user, team]) => {
         const teamPlayersWithStats = team.players.map((p) => skaterStats[p.id]);
         const totalScore = teamPlayersWithStats.reduce(
-          (acc, curr) => 
-            Math.round(acc + curr.score),
+          (acc, curr) => acc + curr.score,
           0
         );
         pickEntries[user] = {
           players: teamPlayersWithStats,
-          score: totalScore,
+          score: totalScore.toFixed(1),
         };
       });
       if (!Object.keys(entriesWithStats).length) {
@@ -85,7 +93,11 @@ function App() {
 
   return (
     <PageWrap className="App">
-      <h1>Hockey Chat Playoff Pool</h1>
+      <h1>
+        <img src={logo} alt="" />
+        Hockey Chat Playoff Pool
+        <img src={logo} alt="" />
+      </h1>
       {Object.entries(entriesWithStats).length > 0 &&
         Object.entries(entriesWithStats)
           .sort(([_userA, teamA], [_userB, teamB]) => teamA.score > teamB.score)
