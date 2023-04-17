@@ -2,13 +2,14 @@ import React from "react";
 import styled from "styled-components";
 
 const TeamSection = styled.section`
-  padding: 2rem;
+  padding: 2rem 0;
   &:not(:last-child) {
     border-bottom: 2px solid #1a261a;
   }
 `;
 const ScrollWrapper = styled.div`
   width: 100%;
+  padding-right: 1rem;
   overflow-y: auto;
 `;
 const TeamHeading = styled.h2`
