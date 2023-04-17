@@ -77,7 +77,7 @@ function App() {
       entriesPool.forEach(([user, team]) => {
         const teamPlayersWithStats = team.players.map((p) => skaterStats[p.id]);
         const totalScore = teamPlayersWithStats.reduce(
-          (acc, curr) => acc + curr.score,
+          (acc, curr) => Number(acc) + Number(curr.score),
           0
         );
         pickEntries[user] = {

@@ -1,7 +1,13 @@
 export const calculatePoints = (skaterStats) => {
   if (skaterStats && Object.keys(skaterStats).length) {
-    const { goals, assists, pim, powerPlayGoals, powerPlayPoints, shots } =
-      skaterStats;
+    const {
+      goals = 0,
+      assists = 0,
+      pim = 0,
+      powerPlayGoals = 0,
+      powerPlayPoints = 0,
+      shots = 0,
+    } = skaterStats;
     const points =
       goals * 2 +
       assists +
