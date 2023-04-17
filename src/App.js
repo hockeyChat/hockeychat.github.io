@@ -117,7 +117,15 @@ function App() {
       </h1>
       {Object.entries(entriesWithStats).length > 0 &&
         Object.entries(entriesWithStats)
-          .sort(([_userA, teamA], [_userB, teamB]) => teamA.score > teamB.score)
+          .sort(([_userA, teamA], [_userB, teamB]) => {
+            if (teamA.score < teamB.score) {
+              return 1;
+            }
+            if (teamA.score > teamB.score) {
+              return -1;
+            }
+            return 0;
+          })
           .map(([user, team]) => {
             return <StatTable user={user} team={team} key={user} />;
           })}

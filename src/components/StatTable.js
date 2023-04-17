@@ -64,7 +64,15 @@ const StatTable = ({ user, team }) => {
           </thead>
           <tbody>
             {team.players
-              .sort((playerA, playerB) => playerA.score > playerB.score)
+              .sort((playerA, playerB) => {
+                if (playerA.score < playerB.score) {
+                  return 1;
+                }
+                if (playerA.score > playerB.score) {
+                  return -1;
+                }
+                return 0;
+              })
               .map((player) => {
                 const {
                   id,

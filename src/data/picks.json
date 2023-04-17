@@ -16,7 +16,6 @@
   ],
   "poolEntries": {
     "SAM": {
-      "score": 0,
       "players": [
         {
           "id": 8480027,
@@ -81,7 +80,6 @@
       ]
     },
     "Pubesy": {
-      "score": 0,
       "players": [
         {
           "id": 8480027,
@@ -146,7 +144,6 @@
       ]
     },
     "Meatball": {
-      "score": 0,
       "players": [
         {
           "id": 8478483,
@@ -211,7 +208,6 @@
       ]
     },
     "DKM": {
-      "score": 0,
       "players": [
         {
           "id": 8476454,
@@ -276,7 +272,6 @@
       ]
     },
     "It's Tim": {
-      "score": 0,
       "players": [
         {
           "id": 8479318,
@@ -337,6 +332,70 @@
           "name": "Charlie McAvoy",
           "position": "D",
           "team": "BOS"
+        }
+      ]
+    },
+    "Samcanadian": {
+      "players": [
+        {
+          "id": 8476454,
+          "name": "Ryan Nugent-Hopkins",
+          "position": "F",
+          "team": "EDM"
+        },
+        {
+          "id": 8473419,
+          "name": "Brad Marchand",
+          "position": "F",
+          "team": "BOS"
+        },
+        {
+          "id": 8478550,
+          "name": "Artemi Panarin",
+          "position": "F",
+          "team": "NYR"
+        },
+        {
+          "id": 8476459,
+          "name": "Mika Zibanejad",
+          "position": "F",
+          "team": "NYR"
+        },
+        {
+          "id": 8476460,
+          "name": "Mark Scheifele",
+          "position": "F",
+          "team": "WPG"
+        },
+        {
+          "id": 8480027,
+          "name": "Jason Robertson",
+          "position": "F",
+          "team": "DAL"
+        },
+        {
+          "id": 8480069,
+          "name": "Cale Makar",
+          "position": "D",
+          "team": "COL"
+        },
+        {
+          "id": 8476854,
+          "name": "Hampus Lindholm",
+          "position": "D",
+          "team": "BOS"
+        },
+        {
+          "id": 8474563,
+          "name": "Drew Doughty",
+          "position": "D",
+          "team": "LAK"
+        },
+        {
+          "id": 8474565,
+          "name": "Alex Pietrangelo",
+          "position": "D",
+          "team": "VGK"
         }
       ]
     }
