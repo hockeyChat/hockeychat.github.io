@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import StatTable from "./components/StatTable";
 import logo from "./assets/logo.jpg";
 import { calculatePoints } from "./utils/calculatePoints";
@@ -14,12 +14,29 @@ const PageWrap = styled.main`
     display: flex;
     align-items: center;
     justify-content: center;
-    img {
-      height: 80px;
-      width: 80px;
-      margin: 0 2rem;
-    }
   }
+`;
+const shakeAnimation = keyframes`
+  0%  { -webkit-transform: translate(2px, 1px) rotate(0deg); }
+  10% { -webkit-transform: translate(-1px, -2px) rotate(-2deg); }
+  20% { -webkit-transform: translate(-3px, 0px) rotate(3deg); }
+  30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
+  40% { -webkit-transform: translate(1px, -1px) rotate(1deg); }
+  50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); }
+  70% { -webkit-transform: translate(2px, 1px) rotate(-2deg); }
+  80% { -webkit-transform: translate(-1px, -1px) rotate(4deg); }
+  90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+  100%{ -webkit-transform: translate(1px, -2px) rotate(-1deg); }
+`;
+const Logo = styled.img`
+  border-radius: 25%;
+  height: 80px;
+  width: 80px;
+  margin: 0 2rem;
+  animation-name: ${shakeAnimation};
+  animation-duration: .5s;
+  animation-iteration-count: infinite;
 `;
 
 function App() {
@@ -94,9 +111,9 @@ function App() {
   return (
     <PageWrap className="App">
       <h1>
-        <img src={logo} alt="" />
+        <Logo src={logo} alt="" />
         Hockey Chat Playoff Pool
-        <img src={logo} alt="" />
+        <Logo src={logo} alt="" />
       </h1>
       {Object.entries(entriesWithStats).length > 0 &&
         Object.entries(entriesWithStats)
