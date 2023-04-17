@@ -5,6 +5,10 @@ const TeamSection = styled.section`
   border-bottom: 2px solid #1a261a;
   padding: 2rem;
 `;
+const ScrollWrapper = styled.div`
+  width: 100%;
+  overflow-y: auto;
+`;
 const TeamHeading = styled.h2`
   margin-top: 0;
   padding-top: 0;
@@ -30,7 +34,6 @@ const PlayerName = styled.td`
   font-weight: bold;
 `;
 const Score = styled.td`
-  text-align: right;
   font-weight: bold;
 `;
 
@@ -40,60 +43,61 @@ const StatTable = ({ user, team }) => {
       <TeamHeading>
         {user}: {team.score}
       </TeamHeading>
-      <StyledTable>
-        <thead>
-          <tr>
-            <th>Player</th>
-            <th>Pos.</th>
-            <th>Team</th>
-            <th>GP</th>
-            <th>G</th>
-            <th>A</th>
-            <th>PIM</th>
-            <th>Shots</th>
-            <th>PPG</th>
-            <th>PPA</th>
-            <th>Score</th>
-          </tr>
-        </thead>
-        <tbody>
-          {team.players
-          .sort((playerA, playerB) => playerA.score > playerB.score).map((player) => {
-            const {
-              id,
-              name,
-              position,
-              team,
-              games,
-              goals,
-              assists,
-              pim,
-              shots,
-              powerPlayGoals,
-              powerPlayPoints,
-              score,
-            } = player;
+      <ScrollWrapper>
+        <StyledTable>
+          <thead>
+            <tr>
+              <th>Player</th>
+              <th>Score</th>
+              <th>Pos.</th>
+              <th>Team</th>
+              <th>GP</th>
+              <th>G</th>
+              <th>A</th>
+              <th>PIM</th>
+              <th>Shots</th>
+              <th>PPG</th>
+              <th>PPA</th>
+            </tr>
+          </thead>
+          <tbody>
+            {team.players
+              .sort((playerA, playerB) => playerA.score > playerB.score)
+              .map((player) => {
+                const {
+                  id,
+                  name,
+                  position,
+                  team,
+                  games,
+                  goals,
+                  assists,
+                  pim,
+                  shots,
+                  powerPlayGoals,
+                  powerPlayPoints,
+                  score,
+                } = player;
 
-            return (
-              <tr key={id}>
-                <PlayerName>{name}</PlayerName>
-                <td>{position}</td>
-                <td>{team}</td>
-                <td>{games || 0}</td>
-                <td>{goals || 0}</td>
-                <td>{assists || 0}</td>
-                <td>{pim || 0}</td>
-                <td>{shots || 0}</td>
-                <td>{powerPlayGoals || 0}</td>
-                <td>{powerPlayPoints - powerPlayGoals || 0}</td>
-                <Score>
-                  {score.toFixed(1)}
-                </Score>
-              </tr>
-            );
-          })}
-        </tbody>
-      </StyledTable>
+                return (
+                  <tr key={id}>
+                    <PlayerName>{name}</PlayerName>
+                    <Score>{score.toFixed(1)}</Score>
+                    <td>{position}</td>
+                    <td>{team}</td>
+                    <td>{games || 0}</td>
+                    <td>{goals || 0}</td>
+                    <td>{assists || 0}</td>
+                    <td>{pim || 0}</td>
+                    <td>{shots || 0}</td>
+                    <td>{powerPlayGoals || 0}</td>
+                    <td>{powerPlayPoints - powerPlayGoals || 0}</td>
+                  </tr>
+                );
+              })}
+          </tbody>
+        </StyledTable>
+      </ScrollWrapper>
     </TeamSection>
   );
 };
