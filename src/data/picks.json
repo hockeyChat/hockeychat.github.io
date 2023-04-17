@@ -398,6 +398,70 @@
           "team": "VGK"
         }
       ]
+    },
+    "Pitt": {
+      "players": [
+        {
+          "id": 8475786,
+          "name": "Zach Hyman",
+          "position": "F",
+          "team": "EDM"
+        },
+        {
+          "id": 8473419,
+          "name": "Brad Marchand",
+          "position": "F",
+          "team": "BOS"
+        },
+        {
+          "id": 8480027,
+          "name": "Jason Robertson",
+          "position": "F",
+          "team": "DAL"
+        },
+        {
+          "id": 8479318,
+          "name": "Auston Matthews",
+          "position": "F",
+          "team": "TOR"
+        },
+        {
+          "id": 8476459,
+          "name": "Mika Zibanejad",
+          "position": "F",
+          "team": "NYR"
+        },
+        {
+          "id": 8478550,
+          "name": "Artemi Panarin",
+          "position": "F",
+          "team": "NYR"
+        },
+        {
+          "id": 8477986,
+          "name": "Brandon Montour",
+          "position": "D",
+          "team": "FLA"
+        },
+        {
+          "id": 8480069,
+          "name": "Cale Makar",
+          "position": "D",
+          "team": "COL"
+        },
+        {
+          "id": 8479410,
+          "name": "Mikhail Sergachev",
+          "position": "D",
+          "team": "TBL"
+        },
+        {
+          "id": 8479325,
+          "name": "Charlie McAvoy",
+          "position": "D",
+          "team": "BOS"
+        }
+      ]
     }
   }
 }
