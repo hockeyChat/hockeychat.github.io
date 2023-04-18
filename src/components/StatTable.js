@@ -1,50 +1,18 @@
 import React from "react";
-import styled from "styled-components";
-
-const TeamSection = styled.section`
-  padding: 2rem 0;
-  &:not(:last-child) {
-    border-bottom: 2px solid #1a261a;
-  }
-`;
-const ScrollWrapper = styled.div`
-  width: 100%;
-  padding-right: 1rem;
-  overflow-y: auto;
-`;
-const TeamHeading = styled.h2`
-  margin-top: 0;
-  padding-top: 0;
-`;
-const StyledTable = styled.table`
-  border-spacing: 0;
-  width: 100%;
-  th,
-  td {
-    padding: 0.25rem 1rem;
-  }
-  thead {
-    background-color: #224723;
-    border-bottom: 1px solid #1a261a;
-    color: #fff;
-  }
-  tbody tr:nth-child(2n + 2) {
-    background-color: #d9ded9;
-  }
-`;
-const PlayerName = styled.td`
-  text-align: left;
-  font-weight: bold;
-`;
-const Score = styled.td`
-  font-weight: bold;
-`;
+import {
+  PlayerName,
+  Score,
+  ScrollWrapper,
+  StyledTable,
+  TeamHeading,
+  TeamSection,
+} from "../styles";
 
 const StatTable = ({ user, team }) => {
   return (
     <TeamSection key={user}>
       <TeamHeading>
-        {user}: {team.score}
+        {user}: {team.score.toFixed(1)}
       </TeamHeading>
       <ScrollWrapper>
         <StyledTable>
