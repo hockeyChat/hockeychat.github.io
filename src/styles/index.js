@@ -1,4 +1,4 @@
-export { ScoringSection, ScoringKey, ScoringKeyHeading } from "./ScoringTable";
+export { ScoringSection, ScoringKeyList, ScoringKeyHeading } from "./ScoringKey";
 export {
   TeamSection,
   TeamHeading,

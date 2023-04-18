@@ -11,7 +11,7 @@ export const ScoringKeyHeading = styled.h4`
   padding: 0.25rem 0.5rem;
 `;
 
-export const ScoringKey = styled.dl`
+export const ScoringKeyList = styled.dl`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   margin: 0;

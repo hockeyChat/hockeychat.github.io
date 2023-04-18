@@ -1,17 +1,17 @@
 import React from "react";
 import {
-  ScoringKey,
+  ScoringKeyList,
   ScoringKeyHeading,
   ScoringSection,
   ScrollWrapper,
 } from "styles";
 
-const ScoringTable = () => {
+const ScoringKey = () => {
   return (
     <ScrollWrapper>
       <ScoringSection>
         <ScoringKeyHeading>Scoring</ScoringKeyHeading>
-        <ScoringKey>
+        <ScoringKeyList>
           <dt>Goal:</dt>
           <dd>2</dd>
           <dt>Assist:</dt>
@@ -24,10 +24,10 @@ const ScoringTable = () => {
           <dd>1</dd>
           <dt>PPA:</dt>
           <dd>0.5</dd>
-        </ScoringKey>
+        </ScoringKeyList>
       </ScoringSection>
     </ScrollWrapper>
   );
 };
 
-export default ScoringTable;
+export default ScoringKey;
