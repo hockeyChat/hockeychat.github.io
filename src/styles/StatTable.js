@@ -39,10 +39,14 @@ export const TeamSection = styled.section`
 
 export const StyledTable = styled.table`
   border-spacing: 0;
-  width: 100%;
+  min-width: 100%;
   th,
   td {
     padding: 0.25rem 1rem;
+    vertical-align: middle;
+    &:first-child {
+      width: 200px;
+    }
   }
   thead {
     background-color: #224723;

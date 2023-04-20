@@ -8,9 +8,12 @@ import {
 
 const ScoringKey = () => {
   return (
-    <ScrollWrapper>
+    <ScrollWrapper flex>
       <ScoringSection>
-        <ScoringKeyHeading>Scoring</ScoringKeyHeading>
+        <ScoringKeyHeading><span>
+          Scoring
+          </span>
+          </ScoringKeyHeading>
         <ScoringKeyList>
           <dt>Goal:</dt>
           <dd>2</dd>

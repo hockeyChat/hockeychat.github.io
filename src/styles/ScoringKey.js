@@ -6,9 +6,16 @@ export const ScoringSection = styled.section`
 
 export const ScoringKeyHeading = styled.h4`
   background-color: #224723;
+  box-sizing: border-box;
   color: #fff;
   margin: 0;
   padding: 0.25rem 0.5rem;
+  width: 100%;
+  height: 1.65rem;
+  span {
+    position: absolute;
+    left: calc(50vw - 2.3rem);
+  }
 `;
 
 export const ScoringKeyList = styled.dl`

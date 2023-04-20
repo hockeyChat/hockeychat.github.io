@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { shakeAnimation } from "./animation";
 
 export const PageWrap = styled.main`
-  padding: 2rem;
+  padding: 2rem 1rem;
   max-width: 1024px;
   margin: auto;
   text-align: center;
@@ -25,6 +25,8 @@ export const Logo = styled.img`
 
 export const ScrollWrapper = styled.div`
   width: 100%;
-  padding-right: 1rem;
   overflow-y: auto;
+  ${props => props.flex && `
+    display: flex;
+  `}
 `;
