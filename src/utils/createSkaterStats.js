@@ -1,18 +1,12 @@
 import { calculatePoints } from "./calculatePoints";
 
-export const createSkaterStats = (playerIds, allPlayers, statData) => {
+export const createSkaterStats = (playerIds, statData) => {
   const statsById = {};
   playerIds.forEach((playerId, i) => {
-    const playerData = allPlayers.find((player) => player.id === playerId);
-    const { id, name, position, team } = playerData;
-    const seasonStats = { ...statData[i].stats[0].splits[0]?.stat };
+    const playerData = statData.find((player) => player.playerId === playerId);
     statsById[playerId] = {
-      ...seasonStats,
-      id,
-      name,
-      position,
-      team,
-      score: calculatePoints(seasonStats),
+      ...playerData,
+      score: calculatePoints(playerData),
     };
   });
   return statsById;

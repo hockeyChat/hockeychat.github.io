@@ -25,10 +25,10 @@ const StatTable = ({ user, team }) => {
               <th>GP</th>
               <th>G</th>
               <th>A</th>
-              <th>PIM</th>
+              {/* <th>PIM</th> */}
               <th>Shots</th>
-              <th>PPG</th>
-              <th>PPA</th>
+              {/* <th>PPG</th>
+              <th>PPA</th> */}
             </tr>
           </thead>
           <tbody>
@@ -45,32 +45,32 @@ const StatTable = ({ user, team }) => {
               .map((player) => {
                 const {
                   id,
-                  name,
-                  team,
-                  position,
-                  games,
+                  skaterFullName,
+                  teamAbbrevs,
+                  positionCode,
+                  gamesPlayed,
                   goals,
                   assists,
-                  pim,
+                  // penaltyMinutes,
                   shots,
-                  powerPlayGoals,
-                  powerPlayPoints,
+                  // ppGoals,
+                  // ppPoints,
                   score,
                 } = player;
 
                 return (
                   <tr key={id}>
-                    <PlayerName>{name}</PlayerName>
+                    <PlayerName>{skaterFullName}</PlayerName>
                     <Score>{score.toFixed(1)}</Score>
-                    <td>{team}</td>
-                    <td>{position}</td>
-                    <td>{games || 0}</td>
+                    <td>{teamAbbrevs}</td>
+                    <td>{positionCode}</td>
+                    <td>{gamesPlayed || 0}</td>
                     <td>{goals || 0}</td>
                     <td>{assists || 0}</td>
-                    <td>{pim || 0}</td>
+                    {/* <td>{penaltyMinutes || 0}</td> */}
                     <td>{shots || 0}</td>
-                    <td>{powerPlayGoals || 0}</td>
-                    <td>{powerPlayPoints - powerPlayGoals || 0}</td>
+                    {/* <td>{ppGoals || 0}</td>
+                    <td>{ppPoints - ppGoals || 0}</td> */}
                   </tr>
                 );
               })}

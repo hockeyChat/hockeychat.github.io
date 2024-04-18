@@ -3,18 +3,18 @@ export const calculatePoints = (skaterStats) => {
     const {
       goals = 0,
       assists = 0,
-      pim = 0,
-      powerPlayGoals = 0,
-      powerPlayPoints = 0,
       shots = 0,
+      // penaltyMinutes = 0,
+      // ppGoals = 0,
+      // ppPoints = 0,
     } = skaterStats;
     const points =
       goals * 2 +
       assists +
-      pim * 0.5 +
-      shots * 0.1 +
-      powerPlayGoals +
-      (powerPlayPoints - powerPlayGoals) * 0.5;
+      shots * 0.1 
+      // penaltyMinutes * 0.5 +
+      // ppGoals +
+      // (ppPoints - ppGoals) * 0.5;
       
     return points;
   }

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { shakeAnimation } from "./animation";
+import { shakeAnimation } from "./Animation";
 
 export const PageWrap = styled.main`
   padding: 2rem 1rem;
