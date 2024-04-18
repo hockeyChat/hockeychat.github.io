@@ -19,14 +19,8 @@ const ScoringKey = () => {
           <dd>2</dd>
           <dt>Assist:</dt>
           <dd>1</dd>
-          <dt>PIM:</dt>
-          <dd>0.5</dd>
           <dt>Shots:</dt>
           <dd>0.1</dd>
-          <dt>PPG:</dt>
-          <dd>1</dd>
-          <dt>PPA:</dt>
-          <dd>0.5</dd>
         </ScoringKeyList>
       </ScoringSection>
     </ScrollWrapper>
