@@ -10,10 +10,9 @@ const ScoringKey = () => {
   return (
     <ScrollWrapper flex>
       <ScoringSection>
-        <ScoringKeyHeading><span>
-          Scoring
-          </span>
-          </ScoringKeyHeading>
+        <ScoringKeyHeading>
+          <span>Scoring</span>
+        </ScoringKeyHeading>
         <ScoringKeyList>
           <dt>Goal:</dt>
           <dd>2</dd>

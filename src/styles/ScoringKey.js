@@ -20,7 +20,7 @@ export const ScoringKeyHeading = styled.h4`
 
 export const ScoringKeyList = styled.dl`
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   margin: 0;
   dt,
   dd {
