@@ -31,7 +31,7 @@ const router = Router();
 
 // const router = express.Router();
 
-router.get("/", async (req, res) => {
+router.get("/stats", async (req, res) => {
   try {
     const statsApi = `https://api.nhle.com/stats/rest/en/skater/summary?isAggregate=false&isGame=falsesort=%5B%7B%22property%22:%22points%22,%22direction%22:%22DESC%22%7D&cayenneExp=gameTypeId=3%20and%20seasonId=20232024&limit=-1`;
     const stats = await fetch(statsApi);
