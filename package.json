@@ -29,7 +29,6 @@
       "react-app/jest"
     ]
   },
-  "proxy": "https://api.nhle.com/",
   "browserslist": {
     "production": [
       ">0.2%",
