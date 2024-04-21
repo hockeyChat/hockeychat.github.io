@@ -42,7 +42,7 @@ const StatTable = ({ user, team }) => {
                 }
                 return 0;
               })
-              .map((player) => {
+              .map((player, i) => {
                 const {
                   id,
                   skaterFullName,
@@ -59,7 +59,7 @@ const StatTable = ({ user, team }) => {
                 } = player;
 
                 return (
-                  <tr key={id}>
+                  <tr key={`${id}-${i}`}>
                     <PlayerName>{skaterFullName}</PlayerName>
                     <Score>{score.toFixed(1)}</Score>
                     <td>{teamAbbrevs}</td>

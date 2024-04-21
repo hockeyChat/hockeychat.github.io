@@ -34,8 +34,10 @@ function App() {
         }),
       }
     )
-      .then((response) => {console.log(response);
-        return response.json()})
+      .then(async (response) => {
+        const statJson = await response.json()
+        return statJson.stats;
+      })
       .then((res) => {
         setStatData(res.data);
       });
