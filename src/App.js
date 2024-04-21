@@ -24,7 +24,7 @@ function App() {
 
   useEffect(() => {
     fetch(
-      `https://api.nhle.com/stats/rest/en/skater/summary?isAggregate=false&isGame=falsesort=%5B%7B%22property%22:%22points%22,%22direction%22:%22DESC%22%7D&cayenneExp=gameTypeId=3%20and%20seasonId=20232024&limit=-1`,
+      '/stats',
       {
         headers: new Headers({
           "Content-Type": "application/json",
@@ -34,7 +34,8 @@ function App() {
         }),
       }
     )
-      .then((response) => response.json())
+      .then((response) => {console.log(response);
+        return response.json()})
       .then((res) => {
         setStatData(res.data);
       });
