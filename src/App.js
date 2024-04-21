@@ -24,7 +24,7 @@ function App() {
 
   useEffect(() => {
     fetch(
-      '/stats',
+      '/api/stats',
       {
         headers: new Headers({
           "Content-Type": "application/json",
