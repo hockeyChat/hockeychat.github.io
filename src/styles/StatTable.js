@@ -1,15 +1,16 @@
 import styled from "styled-components";
 
 export const TeamHeading = styled.button`
-  margin-top: 0;
-  padding-top: 0;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  width: 100%;
   background: 0;
   border: 0;
+  color: black;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+  padding-top: 0;
+  width: 100%;
   h2 {
     font-size: 1.5rem;
   }
@@ -17,20 +18,20 @@ export const TeamHeading = styled.button`
 
 export const TeamSection = styled.section`
   border-bottom: 2px solid #1a261a;
-  position: relative;
   overflow: hidden;
+  position: relative;
   &:before,
   &:after {
-    font-family: "Source Sans Pro", sans-serif;
-    display: block;
-    content: "";
-    position: absolute;
-    top: 2rem;
-    right: 1rem;
-    z-index: -1;
-    width: 20px;
-    height: 5px;
     background-color: black;
+    content: "";
+    display: block;
+    font-family: "Source Sans Pro", sans-serif;
+    height: 5px;
+    position: absolute;
+    right: 1rem;
+    top: 2rem;
+    width: 20px;
+    z-index: -1;
   }
   &:after {
     transform: rotate(-90deg);
@@ -58,8 +59,8 @@ export const TeamSection = styled.section`
       &:before,
       &:after {
         content: "🏆";
-        margin: 0 1rem;
         font-size: 2rem;
+        margin: 0 1rem;
       }
     }
   }
@@ -68,8 +69,8 @@ export const TeamSection = styled.section`
       &:before,
       &:after {
         content: "🥈";
-        margin: 0 1rem;
         font-size: 2rem;
+        margin: 0 1rem;
       }
     }
   }
@@ -97,14 +98,16 @@ export const StyledTable = styled.table`
 `;
 
 export const PlayerRow = styled.tr`
-  ${props => props.isEliminated && `
+  ${(props) =>
+    props.isEliminated &&
+    `
     color: #999;
   `}
 `;
 
 export const PlayerName = styled.td`
-  text-align: left;
   font-weight: bold;
+  text-align: left;
 `;
 
 export const Score = styled.td`
@@ -112,17 +115,15 @@ export const Score = styled.td`
 `;
 
 export const ScoreSection = styled.div`
-  height: 0;
   max-height: 0;
-  visibility: hidden;
   transition: all 0.5s;
-  ${props => props.isOpen && `
-    height: auto;
+  ${(props) =>
+    props.isOpen &&
+    `
     max-height: 1000px;
-    visibility: visible;
-    transition: max-height 0.5s;
-    ${StyledTable} {
-      margin-bottom: 2rem;
-    }
-  `}
+    transition: all 0.5s;
+    `}
+  ${StyledTable} {
+    margin-bottom: 2rem;
+  }
 `;
