@@ -25,7 +25,7 @@ function App() {
 
   useEffect(() => {
     fetch(
-      '/api/stats',
+      '/api/statBracket',
       {
         headers: new Headers({
           "Content-Type": "application/json",
@@ -36,36 +36,14 @@ function App() {
       }
     )
       .then(async (response) => {
-        const statsJson = await response.json()
-        return statsJson.stats.data;
+        const json = await response.json()
+        return {stats: json.stats.data, bracket: json.bracket.series};
       })
       .then((res) => {
-        setStatData(res);
+        setBracketData(res.bracket);
+        setStatData(res.stats);
       });
   }, []);
-
-  // useEffect(() => {
-  //   fetch(
-  //     '/api/bracket',
-  //     {
-  //       headers: new Headers({
-  //         "Content-Type": "application/json",
-  //         "Access-Control-Allow-Origin": "*",
-  //         "Access-Control-Allow-Headers":
-  //           "Origin, X-Requested-With, Content-Type, Accept",
-  //       }),
-  //     }
-  //   )
-  //     .then(async (response) => {
-  //       console.log(response);
-  //       const bracketJson = await response.json()
-  //       return bracketJson;
-  //     })
-  //     .then((res) => {
-  //       console.log(res);
-  //       setBracketData(res);
-  //     });
-  // }, []);
 
   useEffect(() => {
     if (statData.length) {
@@ -85,7 +63,7 @@ function App() {
     }
   }, [entriesWithStats, skaterStats]);
 
-  return <MainPage entriesWithStats={entriesWithStats} />;
+  return <MainPage bracketData={bracketData} entriesWithStats={entriesWithStats} />;
 }
 
 export default App;

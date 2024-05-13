@@ -1,9 +1,11 @@
 import React from "react";
 import { ScoringKey, StatTable } from "components";
 import { Logo, PageWrap } from "styles";
+import { getEliminatedTeams } from "utils";
 import logo from "assets/logo.jpg";
 
-const MainPage = ({ entriesWithStats }) => {
+const MainPage = ({ bracketData, entriesWithStats }) => {
+  const eliminatedTeams = getEliminatedTeams(bracketData);
   return (
     <PageWrap className="App">
       <h1>
@@ -25,7 +27,14 @@ const MainPage = ({ entriesWithStats }) => {
               return 0;
             })
             .map(([user, team]) => {
-              return <StatTable user={user} team={team} key={user} />;
+              return (
+                <StatTable
+                  eliminatedTeams={eliminatedTeams}
+                  key={user}
+                  team={team}
+                  user={user}
+                />
+              );
             })}
       </div>
     </PageWrap>

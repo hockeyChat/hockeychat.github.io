@@ -96,6 +96,12 @@ export const StyledTable = styled.table`
   }
 `;
 
+export const PlayerRow = styled.tr`
+  ${props => props.isEliminated && `
+    color: #999;
+  `}
+`;
+
 export const PlayerName = styled.td`
   text-align: left;
   font-weight: bold;

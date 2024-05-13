@@ -5,6 +5,7 @@ export {
 } from "./ScoringKey";
 export {
   PlayerName,
+  PlayerRow,
   Score,
   ScoreSection,
   StyledTable,

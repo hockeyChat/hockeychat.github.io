@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import {
   PlayerName,
+  PlayerRow,
   Score,
   ScoreSection,
   ScrollWrapper,
@@ -9,7 +10,7 @@ import {
   TeamSection,
 } from "../styles";
 
-const StatTable = ({ user, team }) => {
+const StatTable = ({ eliminatedTeams, team, user }) => {
   const [isOpen, setIsOpen] = useState(true);
 
   const handleOpen = () => setIsOpen(!isOpen);
@@ -66,7 +67,7 @@ const StatTable = ({ user, team }) => {
                   } = player;
 
                   return (
-                    <tr key={`${id}-${i}`}>
+                    <PlayerRow key={`${id}-${i}`} isEliminated={eliminatedTeams.includes(teamAbbrevs)}>
                       <PlayerName>{skaterFullName}</PlayerName>
                       <Score>{score.toFixed(1)}</Score>
                       <td>{teamAbbrevs}</td>
@@ -78,7 +79,7 @@ const StatTable = ({ user, team }) => {
                       <td>{shots || 0}</td>
                       {/* <td>{ppGoals || 0}</td>
                     <td>{ppPoints - ppGoals || 0}</td> */}
-                    </tr>
+                    </PlayerRow>
                   );
                 })}
             </tbody>
