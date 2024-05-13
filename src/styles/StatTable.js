@@ -1,16 +1,48 @@
 import styled from "styled-components";
 
-export const TeamHeading = styled.h2`
+export const TeamHeading = styled.button`
   margin-top: 0;
   padding-top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  background: 0;
+  border: 0;
+  cursor: pointer;
+  h2 {
+    font-size: 1.5rem;
+  }
 `;
 
 export const TeamSection = styled.section`
-  padding: 2rem 0;
   border-bottom: 2px solid #1a261a;
+  position: relative;
+  overflow: hidden;
+  &:before,
+  &:after {
+    font-family: "Source Sans Pro", sans-serif;
+    display: block;
+    content: "";
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    z-index: -1;
+    width: 20px;
+    height: 5px;
+    background-color: black;
+  }
+  &:after {
+    transform: rotate(-90deg);
+    transition: transform 0.25s;
+  }
+  ${(props) =>
+    props.isOpen &&
+    `
+    &:after {
+      transform: rotate(0);
+    }
+  `}
   &:last-child {
     border: 0;
     ${TeamHeading} {
@@ -21,18 +53,24 @@ export const TeamSection = styled.section`
       }
     }
   }
-  &:first-child ${TeamHeading} {
-    &:before,
-    &:after {
-      content: "🏆";
-      margin: 0 1rem;
+  &:first-child {
+    ${TeamHeading} {
+      &:before,
+      &:after {
+        content: "🏆";
+        margin: 0 1rem;
+        font-size: 2rem;
+      }
     }
   }
-  &:nth-child(2) ${TeamHeading} {
-    &:before,
-    &:after {
-      content: "🥈";
-      margin: 0 1rem;
+  &:nth-child(2) {
+    ${TeamHeading} {
+      &:before,
+      &:after {
+        content: "🥈";
+        margin: 0 1rem;
+        font-size: 2rem;
+      }
     }
   }
 `;
@@ -65,4 +103,20 @@ export const PlayerName = styled.td`
 
 export const Score = styled.td`
   font-weight: bold;
+`;
+
+export const ScoreSection = styled.div`
+  height: 0;
+  max-height: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+  ${props => props.isOpen && `
+    height: auto;
+    max-height: 500px;
+    visibility: visible;
+    transition: max-height 0.5s;
+    ${StyledTable} {
+      margin-bottom: 2rem;
+    }
+  `}
 `;

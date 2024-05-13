@@ -1,9 +1,14 @@
-export { ScoringSection, ScoringKeyList, ScoringKeyHeading } from "./ScoringKey";
 export {
-  TeamSection,
-  TeamHeading,
-  StyledTable,
+  ScoringKeyHeading,
+  ScoringKeyList,
+  ScoringSection,
+} from "./ScoringKey";
+export {
   PlayerName,
   Score,
+  ScoreSection,
+  StyledTable,
+  TeamHeading,
+  TeamSection,
 } from "./StatTable";
-export { PageWrap, Logo, ScrollWrapper } from "./Layout";
+export { Logo, PageWrap, ScrollWrapper } from "./Layout";
