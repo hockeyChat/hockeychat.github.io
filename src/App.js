@@ -4,10 +4,11 @@ import { createEntriesWithStats, createSkaterStats } from "utils";
 import picks from "data/picks2024.json";
 
 function App() {
-  const [statData, setStatData] = useState([]);
+  const [bracketData, setBracketData] = useState([]);
   const [entriesWithStats, setEntriesWithStats] = useState({});
-  const [skaterStats, setSkaterStats] = useState({});
   const [playerIds, setPlayerIds] = useState({});
+  const [skaterStats, setSkaterStats] = useState({});
+  const [statData, setStatData] = useState([]);
 
   useEffect(() => {
     const uniquePlayerIds = [];
@@ -35,13 +36,36 @@ function App() {
       }
     )
       .then(async (response) => {
-        const statJson = await response.json()
-        return statJson.stats;
+        const statsJson = await response.json()
+        return statsJson.stats.data;
       })
       .then((res) => {
-        setStatData(res.data);
+        setStatData(res);
       });
   }, []);
+
+  // useEffect(() => {
+  //   fetch(
+  //     '/api/bracket',
+  //     {
+  //       headers: new Headers({
+  //         "Content-Type": "application/json",
+  //         "Access-Control-Allow-Origin": "*",
+  //         "Access-Control-Allow-Headers":
+  //           "Origin, X-Requested-With, Content-Type, Accept",
+  //       }),
+  //     }
+  //   )
+  //     .then(async (response) => {
+  //       console.log(response);
+  //       const bracketJson = await response.json()
+  //       return bracketJson;
+  //     })
+  //     .then((res) => {
+  //       console.log(res);
+  //       setBracketData(res);
+  //     });
+  // }, []);
 
   useEffect(() => {
     if (statData.length) {
