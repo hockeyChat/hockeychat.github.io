@@ -112,7 +112,7 @@ export const ScoreSection = styled.div`
   transition: all 0.5s;
   ${props => props.isOpen && `
     height: auto;
-    max-height: 500px;
+    max-height: 1000px;
     visibility: visible;
     transition: max-height 0.5s;
     ${StyledTable} {
